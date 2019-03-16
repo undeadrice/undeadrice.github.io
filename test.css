@@ -1,10 +1,9 @@
 
 
-body{
-	
-	padding:4%;
-	background-color: #F4F4F4;
+*{
+	background-color:black;
 }
+
 
 .clr{
 	clear: both;
