@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="author" content="Brucki Kamil">
+	<meta name="description" content="Acme Web Design site">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="1.css" type="text/css">
+	<title>Acme Web Design</title>
+</head>
+
+<body onload="onLoad()">
+
+
+	<header id="header-main">
+		<div class="container">
+
+			<div id="name-box">
+				<h1><span class="active">Acme</span> Web Design</h1>
+			</div>		
+
+			<div id="nav-box">
+				<nav>
+					<ul class="horizontal-list">
+						<li><a href="index.html"><span class="active">Home</span></a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="#">Free cookies</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+	</header>
+	<div class="clr"></div>
+
+	<div id="showcase">
+		
+		<div class="container">
+			<h2>Affordable Proffesional Web Design</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna. Nulla nec magna sit amet sem interdum condimentum.</p>
+		</div>
+
+	</div>
+
+
+	<section id="newsletter">
+		<div class="container">
+
+			<div id="newsletter-text">
+				<p>Subscribe to Our newsletter!</p>
+			</div>
+
+			<div id="newsletter-form">
+				<form method="POST" action="lol.php">
+					<input type="email" placeholder="Enter Email...">
+					<input type="submit" value="Subscribe">
+
+				</form>
+
+			</div>
+
+			<div class="clr">	
+			</div>
+
+			
+
+
+		</div>
+
+	</section>
+
+	<main>
+		<div class="container">
+			<div class="box-triple">
+				<img src="img/logo_html.png"></img>
+				<h3>HTML5 Markup</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+			</div>
+
+			<div class="box-triple">
+				<img src="img/logo_css.png"></img>
+				<h3>CSS3 Styling</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+			</div>
+
+			<div class="box-triple">
+				<img src="img/logo_brush.png" alt="logo image"></img>
+				<h3>Graphic design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+			</div>
+		
+
+		</div>
+		<div class="clr"></div>
+		
+
+	</main>
+
+	<footer id="footer-main">
+		<p>Acme Web Design, Copyright &copy; 2019</p>
+	</footer>
+
+
+	<!-- pop-ups go below -->
+
+	<div class="annoying-popup-north">
+		<div id="winrar-promotion">
+			<h1>TYLKO TERAZ! PROMOCJA</h1>
+			<img src="img/winrar.jpg">
+			<p>Winrar 3% OFF!</p>
+			<p>Get the software everyone is talking about right now!</p>
+			<button class="orange-button">Order online</button>
+			<button onclick="closeWinrar()" class="orange-button">Not now</button>
+
+		</div>
+	</div>
+
+
+	<div class="annoying-popup-west">
+		<section id="newsletter">
+		<div class="container">
+
+			<div id="newsletter-text">
+				<p>Subscribe to Our newsletter!</p>
+				<p>Or you'll lose all the cool stuff you dont care about</p>
+			</div>
+
+			<div id="newsletter-form">
+				<form method="POST" action="lol.php">
+					<input type="email" placeholder="Enter Email...">
+					<input type="submit" value="Subscribe">
+
+				</form>
+
+			</div>
+
+			<div class="clr">	
+			</div>
+		</div>
+		<button onclick="closeNewsLetter()" class="orange-button">NO THANKS</button>
+	</section>
+
+	</div>
+
+		<div class="annoying-popup-east">
+			<div id="cookies">
+				<p>We don't use cookies</p>
+				<button class="orange-button" onclick="closeCookies()">ok?</button>
+
+			</div>
+	
+		</div>	
+	</div>
+
+
+
+
+<script src="1.js"></script>
+
+</body>
+</html>
