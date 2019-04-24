@@ -1,76 +1,90 @@
-var pop1 = false;
-var pop2 = false;
-var pop3 = false;
-var pop4 = false;
-var pop5 = false;
+const project=1;
+const about =2;
+const contact=3;
+
+var displaying=project;
+var menuStatus = false;
+var grid = document.querySelector(".grid-container");
 
 
+function switchMenu(){
+  console.log("switch");
 
-window.setTimeout(showWinrar,1000);
+  if(!menuStatus){
+    showMenu();
+    menuStatus = true;
+  }
+
+  else if (menuStatus) {
+    closeMenu();
+    menuStatus = false;
+  }
+}
+
+function showMenu(){
+  console.log("showing");
+  let hamburger = document.querySelector("#nav-main button");
+  let main = document.querySelector("#main");
+  let aside = document.querySelector("#aside-right");
+  grid.style.gridTemplateAreas='"header header nav-main" "main main aside-right" "footer footer footer"'
+  aside.style.display = "block";
+
+  hamburger.style.transform="rotate(360deg)"
+}
+function closeMenu(){
+  console.log("showing");
+  let hamburger = document.querySelector("#nav-main button");
+  let main = document.querySelector("#main");
+  let aside = document.querySelector("#aside-right");
+  hamburger.style.transform="rotate(0deg)"
+  grid.style.gridTemplateAreas='"header header nav-main" "main main main" "footer footer footer"'
+  aside.style.display = "none";
+}
+
+function switchToProject(){
+    let main = document.querySelector("#main-project");
+    let mainAbout = document.querySelector("#main-about");
+    let mainContact = document.querySelector("#main-contact");
+
+    main.style.display="block";
+    main.style.opacity= 1;
 
 
-let link = document.querySelector(".horizontal-list li a[href='#']");
+    mainAbout.style.display="none" ;
+    mainAbout.style.opacity=0;
 
-link.addEventListener("mouseover",onHover)
-link.addEventListener("mouseout",onOut)
+    mainContact.style.display="none";
+    mainContact.style.opacity=0;
+}
 
+function switchToAbout(){
+  let main = document.querySelector("#main-project");
+  let mainAbout = document.querySelector("#main-about");
+  let mainContact = document.querySelector("#main-contact");
 
+  main.style.display="none";
+  main.style.opacity= 0;
 
-function onLoad(e){
+  mainAbout.style.display="block" ;
+  mainAbout.style.opacity=1;
+
+  mainContact.style.display="none";
+  mainContact.style.opacity=0;
 
 }
 
-function onHover(e){
-	let link = document.querySelector(".horizontal-list li a[href='#']");
-	link.innerHTML="NOT FOR YOU"
-	e.stopPropagation();
+function switchToContact(){
+  let main = document.querySelector("#main-project");
+  let mainAbout = document.querySelector("#main-about");
+  let mainContact = document.querySelector("#main-contact");
 
-}
+  main.style.display="none";
+  main.style.opacity= 0;
 
-function onOut(e){
-	let link = document.querySelector(".horizontal-list li a[href='#']");
-	link.innerHTML="Free cookies"
-	e.stopPropagation();
+  mainAbout.style.display="none" ;
+  mainAbout.style.opacity=0;
 
-}
+  mainContact.style.display="block";
+  mainContact.style.opacity=1;
 
-function closeWinrar(e){
-	let popup = document.querySelector(".annoying-popup-north");
-	popup.style.display="none";
-	pop1 = true
-	window.setTimeout(showNewsLetter,800);
-}
-
-function showWinrar(e){
-	
-	let popup = document.querySelector(".annoying-popup-north");
-	popup.style.bottom=0;
-	popup.style.display="block";
-	
-
-}
-
-function showNewsLetter(e){
-	let popup = document.querySelector(".annoying-popup-west");
-	popup.style.right=0;
-	popup.style.display="block";
-
-}
-
-function closeNewsLetter(e){
-	let popup = document.querySelector(".annoying-popup-west");
-	popup.style.display="none";
-	pop2=true;
-	window.setTimeout(showCookies,300);
-}
-
-function showCookies(e){
-	let popup = document.querySelector(".annoying-popup-east");
-	popup.style.left=0;
-}
-
-function closeCookies(e){
-	let popup = document.querySelector(".annoying-popup-east");
-	popup.style.display="none";
-	pop3=true;
 }
