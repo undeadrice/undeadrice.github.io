@@ -22,7 +22,7 @@ function getSelectedFlowerName(){
   switch(selection){
     case 0: return ["Róża",prices[selection]];
     case 1: return ["Fiołek",prices[selection]];
-    case 2: return ["Ziółko",prices[selection]];
+    case 2: return ["Słonecznik",prices[selection]];
 }
 }
 
